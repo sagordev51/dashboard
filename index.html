@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Home - Md Sagor Mia</title>
+</head>
+<video playsinline autoplay muted loop poster="poster.png" id="bgvid">
+    <source src="video_bg.mp4" type="video/mp4">
+</video>
+
+<body>
+    <div class="body">
+        <div class="weather_container">
+
+            <div class="temp">
+                <img src="loader.gif" alt="" width="25" height="25">
+            </div>
+            <div class="country_day">
+                <h3 id="city_country"></h3>
+                <p id="date"></p>
+            </div>
+            <div class="weather_icon"></div>
+            <div class="uv_wind"></div>
+        </div>
+        <h2 id="clock" onload="currentTime()"></h2>
+		<div class="date-container bd-date"></div>
+        <div class="well">
+            <h1 id="myName"></h1><span class="cursor">&nbsp;</span>
+        </div>
+        <h2 id="input"></h2>
+        <div class="search_sec">
+            <div class="search">
+                <input type="text" class="search-input" id="google_input" />
+                <span class="google">
+                    <label for="search_input">
+                        <img src="google.png" alt="google">
+                    </label>
+                </span>
+                <span class="search_icon">
+                    <img src="search-icon-png-21.png" alt="google" id="search_icon_google">
+                </span>
+            </div>
+            <div class="search">
+                <input type="text" class="search-input" id="youtube_input">
+                <span class="google">
+                    <label for="url_input">
+                        <img src="youtube.png" alt="url">
+                    </label>
+                </span>
+                <span class="search_icon">
+                    <img src="search-icon-png-21.png" alt="Url" id="search_icon_youtube">
+                </span>
+            </div>
+        </div>
+        <div class="link_section"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

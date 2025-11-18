@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+#bgvid {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+  /* background: transparent;
+    background: url('bg_1.jpg');
+    background-size: cover;
+    background-attachment: fixed; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+#clock {
+  font-size: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+}
+
+.weather_container {
+  width: 360px;
+  height: 120px;
+  background: #fff;
+  border-radius: 15px;
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 1%;
+  top: 2%;
+}
+
+.temp {
+  width: 50px;
+  height: 50px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.temp p {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  height: 24px;
+}
+
+.country_day h3 {
+  font-size: 1.2rem;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.country_day p {
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: #575454;
+  font-weight: 600;
+}
+
+.weather_icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather_icon img {
+  width: 80px;
+}
+
+.weather_icon p {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.uv_wind {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.well {
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.well h1 {
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.well span.cursor {
+  display: inline-block;
+  background-color: #fff;
+  margin-left: 0.1rem;
+  width: 5px;
+  height: 4rem;
+  animation: blink 1s infinite;
+}
+
+.well span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #fff;
+  }
+
+  49% {
+    background-color: #fff;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  99% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #fff;
+  }
+}
+.date-container {
+  color: #fff;
+  font: 600 2rem system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  box-shadow: 0 1px 2px rgba(2, 8, 20, 0.06);
+}
+
+.search_sec {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.search {
+  width: 28rem;
+  height: 3.5rem;
+  position: relative;
+  transition: ease-in-out 0.2s;
+}
+
+.search .search-input {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding-left: 6rem;
+  padding-right: 4rem;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  transition: all 0.1s;
+  color: #333;
+}
+
+.search input:focus {
+  outline: 0.2rem solid RGB(34, 139, 230);
+}
+
+.google img {
+  width: 65px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-45%);
+}
+
+.search_icon img {
+  width: 20px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.link_section {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.link {
+  width: 220px;
+  height: 120px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s linear;
+  border-radius: 6px;
+}
+
+.link img {
+  width: 80%;
+}
+
+.link:hover,
+.link:focus {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+}
