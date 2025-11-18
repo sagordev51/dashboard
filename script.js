@@ -170,7 +170,7 @@ const links_array = [
 ];
 links_array.forEach((array) => {
   const links_html = `
-    <a href="${array.link}" target="_blank">
+    <a href="${array.link}">
         <div class="link">
             <img src="banner/${array.banner}" alt="">
         </div>
@@ -178,3 +178,4 @@ links_array.forEach((array) => {
   link_section.insertAdjacentHTML("beforeend", links_html);
 });
 //////  Homepage Links Section START ///////
+
