@@ -95,69 +95,6 @@ youtube_input.addEventListener("keydown", (event) => {
   }
 });
 //////  Google and Youtube Search Section END ///////
-
-//////  Auto Typing Effect START ///////
-const typedTextSpan = document.querySelector("#myName");
-const cursorSpan = document.querySelector(".cursor");
-
-const textArray = [
-  "Wellcome to DashBoard V3",
-  "Developed By Md Sagor Mia",
-  "Data Entry Operator at Ha-meem Group",
-  "Full Stack and Software Developer",
-  "Mobile: 01772661151",
-];
-const typingDelay = 100;
-const erasingDelay = 20;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
-
-function type() {
-  if (charIndex < textArray[textArrayIndex].length) {
-    if (!cursorSpan.classList.contains("typing"))
-      cursorSpan.classList.add("typing");
-    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  } else {
-    cursorSpan.classList.remove("typing");
-    setTimeout(erase, newTextDelay);
-  }
-}
-
-function erase() {
-  if (charIndex > 0) {
-    if (!cursorSpan.classList.contains("typing"))
-      cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(
-      0,
-      charIndex - 1
-    );
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  } else {
-    cursorSpan.classList.remove("typing");
-    textArrayIndex++;
-    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-    setTimeout(type, typingDelay + 1100);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  // On DOM Load initiate the effect
-  if (textArray.length) type();
-});
-//////  Auto Typing Effect END ///////
-
-//////  Weather Widget Section START ///////
-
-const city_name = "Gazipur";
-const country_name = "Bangladesh";
-let city_country = document.querySelector("#city_country");
-city_country.innerHTML = `${city_name},<br>${country_name}`;
-//////  Weather Widget Section END ///////
-
 //////  Homepage Links Section START ///////
 
 const link_section = document.querySelector(".link_section");
@@ -178,4 +115,5 @@ links_array.forEach((array) => {
   link_section.insertAdjacentHTML("beforeend", links_html);
 });
 //////  Homepage Links Section START ///////
+
 
